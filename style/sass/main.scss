@@ -1,46 +1,138 @@
+/*
 @font-face {
 	font-family: 'Futura';
 	src: url('Futura-Medium.eot');
 	src: local('Futura-Medium'),
-			url('Futura-Medium.eot?#iefix') format('embedded-opentype'),
-			url('Futura-Medium.woff2') format('woff2'),
-			url('Futura-Medium.woff') format('woff'),
-			url('Futura-Medium.ttf') format('truetype'),
-			url('Futura-Medium.svg#Futura-Medium') format('svg');
+		url('Futura-Medium.eot?#iefix') format('embedded-opentype'),
+		url('Futura-Medium.woff2') format('woff2'),
+		url('Futura-Medium.woff') format('woff'),
+		url('Futura-Medium.ttf') format('truetype'),
+		url('Futura-Medium.svg#Futura-Medium') format('svg');
 	font-weight: 500;
 	font-style: normal;
 }
-
-
-
+*/
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 	font-family: 'Futura', sans-serif;
 }
 
+$verde : #027235;
+$amarillo : #ffeb83;
+$gris: #3a3a3a;
 
-h1, h2, h3, h4 {
+.desktop-list {
+	display: none;
+}
+
+.mobile-list {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
 	font-family: 'Futura', sans-serif;
-  // font-style: italic;
+	// font-style: italic;
 	font-weight: 400;
 	margin-bottom: 1.2em;
 }
-  
-.about, .auspiciador, .programa, .distribucion, .eventos, .enogastronomia, .otras-categorias, .contact {
-  padding: 3.5em 0;
+
+.about,
+.auspiciador,
+.programa,
+.distribucion,
+.eventos,
+.enogastronomia,
+.otras-categorias,
+.contact {
+	padding: 4.5em 0;
 }
 
 .separador {
 	background-image: url("../../assets/images/separador-verde.png");
-	/* outline: 1px solid red; */
 	z-index: 99999;
-	// height: 37px;
 	height: 25px;
 	background-size: contain;
 	background-position: center;
+}
+
+// ESTILOS FIJOS
+.button-click {
+	background-color: $verde;
+	color: #fff;
+	border: none;
+	font-size: 1rem;
+	padding: 0.2em 1.5em;
+}
+
+.about-div {
+	margin-bottom: 2em;
+	box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.19);
+
+	img {
+		display: inline-block;
+		width: 100%;
+	}
+
+	div {
+		background-color: #000;
+		color: #fff;
+		height: 65px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		h4,
+		p {
+			font-size: 1rem;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.div-list {
+	margin-bottom: 4em;
+	box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.19);
+	// width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	img {
+		height: 225px;
+	}
+	.text-information {
+		background-color: #000;
+		color: #fff;
+		height: 65px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		p {
+			font-size: 1rem;
+			margin-bottom: 0;
+		}
+	}
+	ul {
+		list-style: none;
+		margin-bottom: 0;
+		padding: 1em;
+
+		a {
+			color: #3a3a3a;
+			font-weight: 600;
+			line-height: 2;
+			font-size: 1.1rem;
+		}
+	}
+
 }
 
 .scroll-top-mobile {
@@ -55,38 +147,11 @@ h1, h2, h3, h4 {
 	padding: 0.2em;
 }
 
-$verde : #027235;
-$amarillo : #ffeb83;;
+
 //MENUS
 .enogastronomia {
-	padding-top: 1.5em;
-	h2 {
-		margin-top: 1em;
-	}
 	li {
 		font-size: 1rem;
-	}	
-	.enogastronomia-list {
-		margin-bottom: 3em;
-		p {
-		    font-size: 1.3rem;
-    		margin-bottom: 0.5em;
-		}
-		img {
-				box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.19);
-				max-width: 60%;
-				margin-bottom: 0.7em;
-			}		
-		ul {
-			list-style: none;
-		}
-		.see-more {
-			background-color: $verde;
-			color: #fff;
-			border: none;
-			font-size: 1rem;
-			padding: 0.5em 1em;
-		}		
 	}
 }
 
@@ -98,12 +163,14 @@ header {
 		border-top: 4px solid $verde;
 		padding: 0.2em;
 		font-size: 0.9rem;
+
 		ul {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-around;
 			align-items: center;
 			margin-bottom: 0;
+
 			li {
 				display: inline-block;
 				text-decoration: none;
@@ -111,8 +178,8 @@ header {
 		}
 	}
 
-	nav{
-    background-color: #fff;
+	nav {
+		background-color: #fff;
 	}
 
 	.mobile-menu {
@@ -120,10 +187,12 @@ header {
 		padding-top: 1.2em;
 		width: 100%;
 		padding-bottom: 1.2em;
+
 		.navbar-toggler {
 			background-color: #fff;
 			padding: 0.1em;
 		}
+
 		.mobile-main-button {
 			display: inline-block;
 			width: 78%;
@@ -133,6 +202,7 @@ header {
 			justify-content: space-between;
 			align-items: center;
 			float: right;
+
 			button {
 				background-color: $verde;
 				border: none;
@@ -146,119 +216,131 @@ header {
 				margin-top: 0.5em;
 				padding: 0.1em 0.3em;
 				-webkit-box-shadow: 6px 5px 10px -7px rgba(47, 44, 44, 0.65);
-					-moz-box-shadow: 6px 5px 10px -7px rgba(47, 44, 44, 0.65);
-					box-shadow: 6px 5px 10px -7px rgba(47, 44, 44, 0.65);
+				-moz-box-shadow: 6px 5px 10px -7px rgba(47, 44, 44, 0.65);
+				box-shadow: 6px 5px 10px -7px rgba(47, 44, 44, 0.65);
+
 				span {
 					color: #fff;
 				}
 			}
-		}		
+		}
 	}
-	
-  .logo {
-    display: inline-block;
-  }
 
-  .logo-desktop {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -1px;
-    z-index: 90;
+	.logo {
+		display: inline-block;
+	}
+
+	.logo-desktop {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: -1px;
+		z-index: 90;
 		max-width: 131px;
+
 		img {
-			
+
 			box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.19);
 		}
-  }
+	}
 
-  .menu {
-    float: right;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    /* align-items: flex-end; */
-    width: 80%;
-    justify-content: space-evenly;
-			button{
-				background-color: $verde;
-				border: none;
-				color: #fff;
-				font-size: 0.9rem;
-				padding: 0.3em 1.5em 0.3em 0.9em;
-				border-radius: 0.2em;
-				box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.19);
-				cursor: pointer;
-				span {
-					margin-left: 0.8em;
-					vertical-align: text-bottom;
-				}
+	.menu {
+		float: right;
+		height: 100%;
+		display: flex;
+		flex-direction: row;
+		/* align-items: flex-end; */
+		width: 80%;
+		justify-content: space-evenly;
+
+		button {
+			background-color: $verde;
+			border: none;
+			color: #fff;
+			font-size: 0.9rem;
+			padding: 0.3em 1.5em 0.3em 0.9em;
+			border-radius: 0.2em;
+			box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.19);
+			cursor: pointer;
+
+			span {
+				margin-left: 0.8em;
+				vertical-align: text-bottom;
 			}
+		}
 
 		ul {
 			list-style: none;
 			display: inline-block;
 			float: right;
 			margin-top: 2.5em;
+
 			li {
 				color: #848688 !important;
 				display: inline-block;
 				font-size: 1rem;
 				margin-left: 0.5em;
 				cursor: pointer;
+
 				a {
 					text-decoration: none;
 					color: #848688;
 				}
-				a:hover{
+
+				a:hover {
 					color: $verde;
 					font-weight: 500;
 				}
 			}
-			li:active{
+
+			li:active {
 				color: #848688;
 			}
+
 			li:focus {
 				color: #848688;
 			}
 		}
 
-  }
+	}
 
-  .menu-desktop {
-    padding: 1.5em 0;
+	.menu-desktop {
+		padding: 1.5em 0;
 		background-image: url("../../assets/images/background-header.png");
-		 a + p {
+
+		a+p {
 			color: white;
 			font-size: 0.9rem;
 			text-align: center;
 			font-weight: 700;
 		}
-  }
+	}
 }
 
-  
+
 //CAROUSEL
-.carousel-item{ 
+.carousel-item {
 	img {
 		height: 260px;
 	}
-  .carousel-caption {
-    position: absolute;
-    /* right: 15%; */
-    bottom: 90px;
-    left: 0%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center;
-    /* outline: 1px solid red; */
-    width: 100%;
-    /* opacity: 5; */
+
+	.carousel-caption {
+		position: absolute;
+		/* right: 15%; */
+		bottom: 90px;
+		left: 0%;
+		z-index: 10;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		color: #fff;
+		text-align: center;
+		/* outline: 1px solid red; */
+		width: 100%;
+		/* opacity: 5; */
 		background-color: #50505066;
+
 		h3 {
 			// font-family: 'Lucida Bright';
 			// font-style: italic;
@@ -266,62 +348,46 @@ header {
 			font-size: 1.2rem;
 			margin-bottom: 0.5em;
 		}
-  }
-}
-  
-//PARALLAX
-.paral {
-  //min-height: 600px;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-  
-.paralTorre {
-  background-image: url("../../assets/images/pisa-chico.jpg");
+	}
 }
 
-	  
-.paralFood {
-  background-image: url("../../assets/images/foto-parallax.jpg");
+//PARALLAX
+.paral {
+	//min-height: 600px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: 50% 50%;
 }
+
+.paralTorre {
+	background-image: url("../../assets/images/pisa-chico.jpg");
+}
+
+
+.paralFood {
+	background-image: url("../../assets/images/foto-parallax.jpg");
+}
+
 //SOBRE LA FERIA
+
 .about {
 	p {
 		font-size: 1rem;
-	}	
-	
+	}
+
 }
-	.about-title {
-		margin-bottom: 2.5em;
-	}	
-	.about-div {
-		margin-bottom: 2em;
-		box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.19);
-		img {
-			display: inline-block;
-			width: 100%;
-		}
-		div {
-			background-color: #000;
-			color: #fff;
-			height: 65px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			h4, p {
-				font-size: 1rem;
-				margin-bottom: 0;
-			}
-		}		
-	}	
+
+.about-title {
+	margin-bottom: 2.5em;
+}
+
 
 //OBJETIVOS
 .objective {
 	p {
 		font-size: 1.2rem;
-	}	
+	}
+
 	i {
 		color: $verde;
 		margin-right: 0.5em;
@@ -331,88 +397,106 @@ header {
 //PROGRAMA
 .programa {
 	background-color: #f7f7f7;
-	.programa-dia {
-		margin-top: 1.5em;
-		p {
-			font-size: 1.2rem;
-		}
+
+	button {
+		margin-bottom: 3em;
 	}
-  .fecha-div {
-		h4{
+
+	.fecha-div {
+		h4 {
 			margin: 0;
 		}
-  }	
+	}
+
 	.evento-div {
 		margin-bottom: 3.5em;
+
 		p {
 			color: #fff;
 			font-size: 1.1rem;
 			margin-top: 1em;
 		}
 	}
+
 	.calendar {
-    margin-bottom: 3.5em;
+		margin-bottom: 3.5em;
 	}
+
 	.croquis {
-    margin-bottom: 3.5em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+		margin-bottom: 3.5em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
+
 		#map {
 			height: 238px;
 			width: 260px;
-		}		
+		}
 	}
 }
 
 //Evento
-.eventos  {
+.eventos {
 	.evento-list {
 		margin-bottom: 3rem;
 	}
+
 	p {
 		font-size: 1.5em;
-	}	
+	}
 
-}  
+}
+
 //AUSPICIADOR 
 .auspiciador {
 	background-color: #f7f7f7;
+
 	.separador {
 		margin: 3em 0 2em 0;
 	}
+
 	.supports-icons {
-		div {    
+		div {
 			box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.19);
 			background-color: #027235;
-			color: #fff;
 			padding: 1em 1em;
 			margin-bottom: 1.5em;
 			font-size: 0.9rem;
+
+			a {
+				color: #fff;
+
+			}
 		}
 	}
+
 	.auspiciadores {
-		margin-top: 2.5em;
+		margin: 2.5em 0;
+
 		.sponsors-icons {
 			text-align: center;
+
 			img {
 				width: 25%;
 				height: 10%;
 				margin: 0.6em;
 				box-shadow: 2px 1px 3px 0px rgba(0, 0, 0, 0.19);
 			}
-		}	
-	}  	
+		}
+	}
 }
- 
+
 
 //CONTACTO
 .contact {
 	background-color: $verde;
 	color: #fff;
-	.piazza-italia, .cam-comercio {
+
+	.piazza-italia,
+	.cam-comercio {
 		padding: 1em 2em;
+
 		/*
 		display: flex;
     height: 300px;
@@ -425,80 +509,98 @@ header {
 			flex-direction: column;
 			justify-content: center;
 		}
+
 		h3 {
 			margin-bottom: 0.9em;
 			font-size: 1.3rem;
 		}
+
 		p {
 			font-size: 0.9rem;
 		}
+
 		span {
 			margin-right: 0.5em;
 		}
 	}
-  .register-info {
+
+	.register-info {
 		padding: 0.2em 2em;
+
 		p {
 			font-size: 1.1rem;
+
 			i {
-					margin-right: 1em;
-				}				
+				margin-right: 1em;
+			}
 		}
+
 		input {
 			background-color: $verde;
 			border: none;
 			border-bottom: 2px solid #fff;
-			color:#fff;
+			color: #fff;
 			font-size: 1.1rem;
 			width: 100%;
 		}
-		input::-webkit-input-placeholder { 
-			color: #fff; 
+
+		input::-webkit-input-placeholder {
+			color: #fff;
 		}
-		input::-moz-placeholder { 
-			color: #fff; 
+
+		input::-moz-placeholder {
+			color: #fff;
 		}
-		input::-ms-input-placeholder { 
-			color: #fff; 
+
+		input::-ms-input-placeholder {
+			color: #fff;
 		}
 	}
-  .contactanos-div {
-    margin-top: 3em;
-  }	
+
+	.contactanos-div {
+		margin-top: 3em;
+	}
+
 	.contact-info {
 		color: #fff;
-    padding: 0.2em 2em;
+		padding: 0.2em 2em;
+
 		i {
-				font-size: 1.5rem;
-   			width: 12%;
-			}		
+			font-size: 1.5rem;
+			width: 12%;
+		}
+
 		span {
 			font-size: 1.1rem;
-		}			
+		}
 	}
-  .arrow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+
+	.arrow {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-end;
 		margin-top: 2rem;
+
 		i {
 			font-size: 3rem;
 			color: #f1f1f1;
 		}
-  }
+	}
 }
- 
-  
+
+
 //FOOTER
 footer {
-  background-color: #000;
-  color: #fff;
-  height: 70px;
-  display: flex;
+	background-color: #000;
+	color: #fff;
+	height: 70px;
+	display: flex;
 	align-items: center;
+
 	.social-network {
 		float: left !important;
+
 		i {
 			background-color: #fff;
 			color: #000;
@@ -506,103 +608,70 @@ footer {
 			padding: 3px;
 			width: 20px;
 			text-align: center;
-		}			
-	}	
+		}
+	}
+
 	.team {
 		float: right !important;
 	}
 }
-  
-  /* Small devices (landscape phones, 576px and up)*/
+
+
+
 @media (min-width: 576px) {
-	header {
-		.upper-nav {
-			ul {
-				padding-left: 180px;
-			}					
-		}		
-		.mobile-menu {
-			.mobile-main-button {
-				button {
-					font-size: 1rem;
-					padding: 0.2em 0.8em;
-				} 			
-			}			
-		}
-	}
-    
-	.carousel-item {
-		img {
-			height: 410px;
-		}		
+	.desktop-list {
+		display: none;
 	}
 
-	.contact {
-		.contact-info {
-			i {
-				width: 9%;
-			}				
-		}
+	.mobile-list {
+		display: block;
 	}
-
-}
-  
-  
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { 
-  .paralTorre {
-    background-image: url("../../assets/images/pisa.jpg");
-  }
 
 	.programa {
-		.fecha-div {
-			margin: 0 0.5em;
-		}		
-	}
-
-	.carousel-item {
-		img {
-			height: 500px;
-		}			
-	}
-	
-	.auspiciador {
-		.auspiciadores {
-			.sponsors-icons {
-				img {
-    			width: 20%; 
-				}
-			}	
-		}  	
-	}
-	
-	.contact {
-		.contact-info {
-			i {
-				width: 7%;
-			}				
+		button {
+			margin-bottom: 4.5em;
 		}
 	}
 
-}
-  
-  
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-  .paralTorre {
-    background-image: url("../../assets/images/pisa.jpg");
-  }
-
-  .logo img {
-    width: 100px;
+	h2 {
+		margin-bottom: 2.5em;
 	}
-	
-  .carousel-item {
+}
+
+@media (min-width: 768px) {
+	.desktop-list {
+		display: block;
+	}
+
+	.mobile-list {
+		display: none;
+	}
+	.carousel-item {
 		img {
-			height: 700px;
-		}			
-	} 
-	
+			height: 400px;
+		}
+	}
+}
+
+
+@media (min-width: 992px) {
+	.desktop-list {
+		display: block;
+	}
+
+	.mobile-list {
+		display: none;
+	}
+	.div-list {
+		img {
+			height: 290px;
+		}
+	}
+	.carousel-item {
+		img {
+			height: 470px;
+		}
+	}
 	.auspiciador {
 		.auspiciadores {
 			.sponsors-icons {
@@ -610,33 +679,21 @@ footer {
 					width: 15%;
 					height: 10%;
 					margin: 0.6em;
+					box-shadow: 2px 1px 3px 0px rgba(0, 0, 0, 0.19);
 				}
-			}	
-		}  	
-	}
-		
-	.contact {
-		.contact-info {
-			i {
-				width: 5%;
-			}				
+			}
 		}
 	}
-  
 }
-  
-  
+ 
 @media (min-width: 1200px) {
-  .paralTorre {
-		background-image: url("../../assets/images/pisa.jpg");
-		background-size: auto;
-  }
-  /*HEADER*/
-  .carousel-item {
-		img {
-			height: 700px;
-		}			
-	} 
+	.desktop-list {
+		display: block;
+	}
+
+	.mobile-list {
+		display: none;
+	}
+   
 }
-  
   

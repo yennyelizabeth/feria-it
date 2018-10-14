@@ -1,10 +1,17 @@
+/*
 @font-face {
-  font-family: "Futura";
-  src: url("Futura-Medium.eot");
-  src: local("Futura-Medium"), url("Futura-Medium.eot?#iefix") format("embedded-opentype"), url("Futura-Medium.woff2") format("woff2"), url("Futura-Medium.woff") format("woff"), url("Futura-Medium.ttf") format("truetype"), url("Futura-Medium.svg#Futura-Medium") format("svg");
-  font-weight: 500;
-  font-style: normal;
+	font-family: 'Futura';
+	src: url('Futura-Medium.eot');
+	src: local('Futura-Medium'),
+		url('Futura-Medium.eot?#iefix') format('embedded-opentype'),
+		url('Futura-Medium.woff2') format('woff2'),
+		url('Futura-Medium.woff') format('woff'),
+		url('Futura-Medium.ttf') format('truetype'),
+		url('Futura-Medium.svg#Futura-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
 }
+*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -12,23 +19,106 @@
   font-family: "Futura", sans-serif;
 }
 
-h1, h2, h3, h4 {
+.desktop-list {
+  display: none;
+}
+
+.mobile-list {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
   font-family: "Futura", sans-serif;
   font-weight: 400;
   margin-bottom: 1.2em;
 }
 
-.about, .auspiciador, .programa, .distribucion, .eventos, .enogastronomia, .otras-categorias, .contact {
-  padding: 3.5em 0;
+.about,
+.auspiciador,
+.programa,
+.distribucion,
+.eventos,
+.enogastronomia,
+.otras-categorias,
+.contact {
+  padding: 4.5em 0;
 }
 
 .separador {
   background-image: url("../../assets/images/separador-verde.png");
-  /* outline: 1px solid red; */
   z-index: 99999;
   height: 25px;
   background-size: contain;
   background-position: center;
+}
+
+.button-click {
+  background-color: #027235;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.2em 1.5em;
+}
+
+.about-div {
+  margin-bottom: 2em;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.19);
+}
+.about-div img {
+  display: inline-block;
+  width: 100%;
+}
+.about-div div {
+  background-color: #000;
+  color: #fff;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-div div h4,
+.about-div div p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.div-list {
+  margin-bottom: 4em;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.div-list img {
+  height: 225px;
+}
+.div-list .text-information {
+  background-color: #000;
+  color: #fff;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.div-list .text-information p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.div-list ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 1em;
+}
+.div-list ul a {
+  color: #3a3a3a;
+  font-weight: 600;
+  line-height: 2;
+  font-size: 1.1rem;
 }
 
 .scroll-top-mobile {
@@ -43,45 +133,15 @@ h1, h2, h3, h4 {
   padding: 0.2em;
 }
 
-.enogastronomia {
-  padding-top: 1.5em;
-}
-.enogastronomia h2 {
-  margin-top: 1em;
-}
 .enogastronomia li {
   font-size: 1rem;
-}
-.enogastronomia .enogastronomia-list {
-  margin-bottom: 3em;
-}
-.enogastronomia .enogastronomia-list p {
-  font-size: 1.3rem;
-  margin-bottom: 0.5em;
-}
-.enogastronomia .enogastronomia-list img {
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.19);
-  max-width: 60%;
-  margin-bottom: 0.7em;
-}
-.enogastronomia .enogastronomia-list ul {
-  list-style: none;
-}
-.enogastronomia .enogastronomia-list .see-more {
-  background-color: #027235;
-  color: #fff;
-  border: none;
-  font-size: 1rem;
-  padding: 0.5em 1em;
 }
 
 header .upper-nav {
   background-color: #000;
   color: #fff;
   border-top: 4px solid #027235;
-   /*  border-bottom: 2px solid #dc3545;
-  /*padding: 0.2em;*/
-  padding: 0.5em;
+  padding: 0.2em;
   font-size: 0.9rem;
 }
 header .upper-nav ul {
@@ -100,8 +160,6 @@ header nav {
 }
 header .mobile-menu {
   background-image: url("../../assets/images/background-header.png");
-    
-   
   padding-top: 1.2em;
   width: 100%;
   padding-bottom: 1.2em;
@@ -147,31 +205,21 @@ header .logo-desktop {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-
+  position: absolute;
   top: -1px;
   z-index: 90;
   max-width: 131px;
-}
-
-ul li {
-    list-style: none;
 }
 header .logo-desktop img {
   box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.19);
 }
 header .menu {
   float: right;
-  padding: 20px;
-
- left: 100px;
+  height: 100%;
   display: flex;
   flex-direction: row;
-    position: relative;
-
-    
   /* align-items: flex-end; */
-  
+  width: 80%;
   justify-content: space-evenly;
 }
 header .menu button {
@@ -216,11 +264,8 @@ header .menu ul li:focus {
   color: #848688;
 }
 header .menu-desktop {
-  padding: 0.1em 0.1em 0.1em 0.1em;
-  /*background-image: url("../../assets/images/background-header.png");*/
-    background-color: transparent;
-  position: absolute;
-    z-index: 90;
+  padding: 1.5em 0;
+  background-image: url("../../assets/images/background-header.png");
 }
 header .menu-desktop a + p {
   color: white;
@@ -228,40 +273,6 @@ header .menu-desktop a + p {
   text-align: center;
   font-weight: 700;
 }
-
-.cursor {
-    cursor:pointer;
-}
-
-.mini {
-    height: 20px;
-    width: 20px;
-}
-
-.carousel-item .carousel-caption {
-
-    color: #fff !important;
-
-    background-color: #0e0c0d40 !important;
-}
-
-
-.carousel-control-next-icon {
-    background-image: url(../../assets/images/proximo.png) !important;
-}
-
-.carousel-control-prev-icon {
-    background-image: url(../../assets/images/espalda.png) !important;
-}
-
-.modal-body {
-    position: relative;
-    -ms-flex: 1 1 auto;
-    flex: 0 0 auto !important;
-    padding: 0.5rem !important;
-    height: inherit;
-}
-
 
 .carousel-item img {
   height: 260px;
@@ -272,14 +283,14 @@ header .menu-desktop a + p {
   bottom: 90px;
   left: 0%;
   z-index: 10;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: #555478;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
   text-align: center;
   /* outline: 1px solid red; */
   width: 100%;
   /* opacity: 5; */
-  background-color: #fff;
+  background-color: #50505066;
 }
 .carousel-item .carousel-caption h3 {
   font-weight: 400;
@@ -309,28 +320,6 @@ header .menu-desktop a + p {
   margin-bottom: 2.5em;
 }
 
-.about-div {
-  margin-bottom: 2em;
-  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.19);
-}
-.about-div img {
-  display: inline-block;
-  width: 100%;
-}
-.about-div div {
-  background-color: #000;
-  color: #fff;
-  height: 65px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.about-div div h4, .about-div div p {
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-
 .objective p {
   font-size: 1.2rem;
 }
@@ -342,11 +331,8 @@ header .menu-desktop a + p {
 .programa {
   background-color: #f7f7f7;
 }
-.programa .programa-dia {
-  margin-top: 1.5em;
-}
-.programa .programa-dia p {
-  font-size: 1.2rem;
+.programa button {
+  margin-bottom: 3em;
 }
 .programa .fecha-div h4 {
   margin: 0;
@@ -390,13 +376,15 @@ header .menu-desktop a + p {
 .auspiciador .supports-icons div {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.19);
   background-color: #027235;
-  color: #fff;
   padding: 1em 1em;
   margin-bottom: 1.5em;
   font-size: 0.9rem;
 }
+.auspiciador .supports-icons div a {
+  color: #fff;
+}
 .auspiciador .auspiciadores {
-  margin-top: 2.5em;
+  margin: 2.5em 0;
 }
 .auspiciador .auspiciadores .sponsors-icons {
   text-align: center;
@@ -412,7 +400,8 @@ header .menu-desktop a + p {
   background-color: #027235;
   color: #fff;
 }
-.contact .piazza-italia, .contact .cam-comercio {
+.contact .piazza-italia,
+.contact .cam-comercio {
   padding: 1em 2em;
   /*
   display: flex;
@@ -421,20 +410,24 @@ header .menu-desktop a + p {
   justify-content: center;
   */
 }
-.contact .piazza-italia .contact-person, .contact .cam-comercio .contact-person {
+.contact .piazza-italia .contact-person,
+.contact .cam-comercio .contact-person {
   height: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.contact .piazza-italia h3, .contact .cam-comercio h3 {
+.contact .piazza-italia h3,
+.contact .cam-comercio h3 {
   margin-bottom: 0.9em;
   font-size: 1.3rem;
 }
-.contact .piazza-italia p, .contact .cam-comercio p {
+.contact .piazza-italia p,
+.contact .cam-comercio p {
   font-size: 0.9rem;
 }
-.contact .piazza-italia span, .contact .cam-comercio span {
+.contact .piazza-italia span,
+.contact .cam-comercio span {
   margin-right: 0.5em;
 }
 .contact .register-info {
@@ -511,79 +504,67 @@ footer .team {
   float: right !important;
 }
 
-/* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-  header .upper-nav ul {
-    padding-left: 400px;
-  }
-  header .mobile-menu .mobile-main-button button {
-    font-size: 1rem;
-    padding: 0.2em 0.8em;
+  .desktop-list {
+    display: none;
   }
 
-  .carousel-item img {
-    height: 410px;
+  .mobile-list {
+    display: block;
   }
 
-  .contact .contact-info i {
-    width: 9%;
+  .programa button {
+    margin-bottom: 4.5em;
+  }
+
+  h2 {
+    margin-bottom: 2.5em;
   }
 }
-/* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-  .paralTorre {
-    background-image: url("../../assets/images/pisa-1.png");
+  .desktop-list {
+    display: block;
   }
 
-  .programa .fecha-div {
-    margin: 0 0.5em;
+  .mobile-list {
+    display: none;
   }
 
   .carousel-item img {
-    height: 500px;
-  }
-
-  .auspiciador .auspiciadores .sponsors-icons img {
-    width: 20%;
-  }
-
-  .contact .contact-info i {
-    width: 7%;
+    height: 400px;
   }
 }
-/* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .paralTorre {
-    background-image: url("../../assets/images/pisa-1.png");
+  .desktop-list {
+    display: block;
   }
 
-  .logo img {
-    width: 100px;
+  .mobile-list {
+    display: none;
+  }
+
+  .div-list img {
+    height: 290px;
   }
 
   .carousel-item img {
-    height: 600px;
+    height: 470px;
   }
 
   .auspiciador .auspiciadores .sponsors-icons img {
     width: 15%;
     height: 10%;
     margin: 0.6em;
-  }
-
-  .contact .contact-info i {
-    width: 5%;
+    box-shadow: 2px 1px 3px 0px rgba(0, 0, 0, 0.19);
   }
 }
 @media (min-width: 1200px) {
-  .paralTorre {
-    background-image: url("../../assets/images/pisa-1.png");
-    background-size: auto;
+  .desktop-list {
+    display: block;
   }
 
-  /*HEADER*/
-  .carousel-item img {
-    height: 600px;
+  .mobile-list {
+    display: none;
   }
 }
 
